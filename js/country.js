@@ -14,8 +14,8 @@ function createList() {
     for(var i in paises){
         var listHtml= 
             '<a href="signup.html"><li>'+
-                '<img class="img-size" src="'+ paises[i].imageURL +'" alt=""><p class="country-name">'+ paises[i].name +'</p> <span><strong>+'+ paises[i].phone_code +'</strong></span>'+
-            '</li></a><hr>';
+                '<img class="img-size" src="'+ paises[i].imageURL +'" alt=""><p class="country-name">'+ paises[i].nombre +'</p> <span><strong>+'+ paises[i].phone_code +'</strong></span>'+
+            '</li><hr></a>';
         elListCountries.innerHTML += listHtml;
     }
 }
@@ -43,6 +43,7 @@ search.addEventListener("keyup", function(e){
    var choice = this.value;
  
    forEach.call(contacto, function(f){
+       console.log(f.parentNode.parentNode);
        if (f.innerHTML.toLowerCase().search(choice.toLowerCase()) == -1)
            f.parentNode.parentNode.style.display = "none";   
        else
