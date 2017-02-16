@@ -27,3 +27,12 @@ section {
     width:100%;
     padding: 10% 10%;
 }
+.transparente{
+    background: rgba(255, 0, 0, 0);
+    color: #fff;
+    border-width: 2px;
+}
+.derechin {
+    background: #ff00e2;
+    border-color: #ff00e2;
+}
