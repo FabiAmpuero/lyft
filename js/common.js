@@ -772,7 +772,7 @@ var paises= [
     "iso3": "GNQ",
     "phone_code": 240,
     "imageURL": "image/gq.png"
-  },
+  }/*,
   {
     "nombre": "Guinea-Bissau",
     "name": "Guinea-Bissau",
@@ -2212,5 +2212,5 @@ var paises= [
     "iso3": "ZWE",
     "phone_code": 263,
     "imageURL": "image/zw.png"
-  }
+  }*/
 ]
