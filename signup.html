@@ -22,6 +22,7 @@
             </div>
         </div>
     </div>
+        
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -29,13 +30,16 @@
               <div class="input-group-btn">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn-flag"><img class="img-responsive peru" src="image/peru.png" alt="" id="img-flag"> <span class="caret"></span></button>
               </div><!-- /btn-group -->
-              <input type="text" class="form-control" aria-label="..." placeholder="1122334455">
+              <span class="code"><strong>+51</strong></span>
+                  <input id="number" type="text" onkeydown="validateNumber(event)" class="form-control" aria-label="..." placeholder="1122334455">
             </div><!-- /input-group -->
+               <div id="mensajeNumber"></div>
+                <br>
                 <div class="text-center"><small>We'll send a text to verify your phone</small></div>
             </div><!-- /.col-lg-6 -->
     </div>
     </div>
-    <a href="signame.html"><button class="btn-next">Next</button></a>
+    <a id="next" class="btn btn-next">Next</a>
 </header>
 <script src="js/common.js"></script>
 <script src="js/signup.js"></script>
