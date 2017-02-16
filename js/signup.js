@@ -2,7 +2,7 @@ var botonFlag = document.getElementById("btn-flag");
 botonFlag.addEventListener("click",onFlagClick);
 
 function onFlagClick() {
-    window.location.href="../paises.html";
+    window.location.href="paises.html";
 }
 
 
