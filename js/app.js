@@ -11,7 +11,7 @@ function initMap() {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Laboratoria</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>laboratoria</b></p>'+
+      '<p><b>Laboratoria</b></p>'+
       '</div>'+
       '</div>';
     
@@ -39,6 +39,8 @@ function initMap() {
     map: miMapa,
     label: "l",
     icon: 'image/carrin.png',
+    draggable: true,
+    animation: google.maps.Animation.DROP,
     title: 'Aqui estamos!!!'
     });
     
@@ -63,5 +65,14 @@ function initMap() {
     pazPeru.addListener('click', function() {
     infowindow.open(map, pazPeru);
   });
+    
+    marker.addListener('click', toggleBounce);
 }
 
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
