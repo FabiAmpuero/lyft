@@ -1,41 +1,44 @@
-var botonFlag = document.getElementById("btn-flag");
-botonFlag.addEventListener("click",onFlagClick);
+var botonFlag = $("#btn-flag");
+botonFlag.on("click",onFlagClick);
 
 function onFlagClick() {
-    window.location.href="paises.html";
+    //window.location.href="paises.html";
+    $(location).attr("href","paises.html");
 }
 
 
 function init()
 {
-    var imgFlag = document.getElementById("img-flag");
+    var imgFlag = $("#img-flag");
     
     var select = localStorage.getItem('country_select'); 
-    var country_url = paises[select].imageURL;
     
+    var country_url = paises[select].imageURL;
+    console.log(country_url);
     imgFlag.src=country_url;
     
     // ------------------------- CODIGO
-    var button = document.getElementById("next");
-    button.addEventListener('click',onButtonClick);
+    var button = $("#next");
+    button.on('click',onButtonClick);
 }
 
 // --------------------------------------
-var inputNumber = document.getElementById("number");
+var inputNumber =$("#number");
 
 
 function onButtonClick() {
     
-    localStorage.setItem('Number', inputNumber.value);
+    localStorage.setItem('Number', inputNumber.val());
     
-    var mensajeNumber = document.getElementById("mensajeNumber");
+    var mensajeNumber = $("#mensajeNumber");
     
-    if(inputNumber.value == '') {
-        mensajeNumber.innerHTML = "<br><h5 class='text-center' style='color:#FF1493';>Debes escribir tu número telefónico</h5>"
+    if(inputNumber.val() == '') {
+        mensajeNumber.html("<br><h5 class='text-center' style='color:#FF1493';>Debes escribir tu número telefónico</h5>")
     } else {
-        mensajeNumber.innerHTML = '';
+        mensajeNumber.html('');
         onCode();
-        location.href = 'signame.html';
+        //location.href = 'signame.html';
+        $(location).attr("href","signame.html");
     }
 }
 
